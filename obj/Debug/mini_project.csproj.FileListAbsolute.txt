@@ -1,0 +1,15 @@
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\bin\Debug\mini_project.exe.config
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\bin\Debug\mini_project.exe
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\bin\Debug\mini_project.pdb
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.csprojAssemblyReference.cache
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.Student.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.Properties.Resources.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.csproj.GenerateResource.cache
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.exe
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.pdb
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.StudentDetails.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.CLO.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.CLO_details.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.Rubrics.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.Rubric_details.resources
