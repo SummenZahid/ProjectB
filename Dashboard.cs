@@ -16,5 +16,27 @@ namespace mini_project
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CLO_details c = new CLO_details();
+            c.Show();
+            this.Hide();
+        }
+
+        private void btn_student_Click(object sender, EventArgs e)
+        {
+            StudentDetails s = new StudentDetails();
+            this.Hide();
+            s.Show();
+        }
+
+        private void btn_rubric_Click(object sender, EventArgs e)
+        {
+            CLO_details r = new CLO_details();
+            r.Show();
+            this.Hide();
+            MessageBox.Show("Select CLO to add rubrics");
+        }
     }
 }

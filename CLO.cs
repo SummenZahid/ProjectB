@@ -24,8 +24,6 @@ namespace mini_project
             InitializeComponent();
             id = Id;
             txt_name.Text = name;
-            txt_date_created.Text = date_created;
-            txt_date_update.Text = date_updated;
             update = 1;
         }
         private void btn_submit_Click(object sender, EventArgs e)
@@ -34,7 +32,7 @@ namespace mini_project
             if (update == 1)
             {
                 conn.Open();
-                string query2 = "Update Clo set Name = '" + txt_name.Text + " ', DateCreated = '" + txt_date_created.Value.Date + "' , DateUpdated = '" + txt_date_update.Value.Date + "' where Id = '" + this.id + "'";
+                string query2 = "Update Clo set Name = '" + txt_name.Text + " ', DateCreated = '" + DateTime.Today + "' , DateUpdated = '" + DateTime.Now + "' where Id = '" + this.id + "'";
                 SqlCommand update_command = new SqlCommand(query2, conn);
                 int j = update_command.ExecuteNonQuery();
                 if (j != 0)
@@ -51,7 +49,7 @@ namespace mini_project
             else
             {
                 conn.Open();
-                string query = "Insert into Clo (Name, DateCreated, DateUpdated) values('" + txt_name.Text + "', '" + txt_date_created.Value.Date + "', '" + txt_date_update.Value.Date + "')";
+                string query = "Insert into Clo (Name, DateCreated, DateUpdated) values('" + txt_name.Text + "', '" + DateTime.Today + "', '" + DateTime.Now + "')";
                 SqlCommand command = new SqlCommand(query, conn);
                 int i = command.ExecuteNonQuery();
                 if (i != 0)
@@ -73,6 +71,40 @@ namespace mini_project
             {
                 btn_submit.Text = "update";
             }
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            d.Show();
+            this.Hide();
+        }
+
+        private void btn_student_Click(object sender, EventArgs e)
+        {
+            StudentDetails s = new StudentDetails();
+            s.Show();
+            this.Hide();
+        }
+
+        private void btn_rubric_Click(object sender, EventArgs e)
+        {
+            CLO_details r = new CLO_details();
+            MessageBox.Show("Select clo to add or show rubrics");
+            r.Show();
+            this.Hide();
+        }
+
+        private void btn_cloo_Click(object sender, EventArgs e)
+        {
+            CLO_details c = new CLO_details();
+            this.Hide();
+            c.Show();
         }
     }
 }

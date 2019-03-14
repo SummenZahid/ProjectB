@@ -105,9 +105,82 @@ namespace mini_project
 
         private void CLO_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            CLO c = new CLO();
+            Dashboard c = new Dashboard();
             c.Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            this.Hide();
+            d.Show();
+        }
+
+        private void btn_clo_Click(object sender, EventArgs e)
+        {
+            CLO_details c = new CLO_details();
+            c.Show();
+            this.Hide();
+        }
+
+        private void btn_rubric_Click(object sender, EventArgs e)
+        {
+            
+            CLO_details c = new CLO_details();
+            c.Show();
+            MessageBox.Show("SELECT CLO TO ADD OR SHOW RUBRICS");
+            this.Hide();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btn_student_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btn_rubric_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btn_cloo_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            d.Show();
+            this.Hide();
+        }
+
+        private void btn_student_Click_1(object sender, EventArgs e)
+        {
+            StudentDetails s = new StudentDetails();
+            s.Show();
+            this.Hide();
+        }
+
+        private void btn_rubric_Click_2(object sender, EventArgs e)
+        {
+            CLO_details r = new CLO_details();
+            MessageBox.Show("Select clo to add or show rubrics");
+            r.Show();
+            this.Hide();
+        }
+
+        private void btn_cloo_Click_1(object sender, EventArgs e)
+        {
+            CLO_details c = new CLO_details();
+            this.Hide();
+            c.Show();
+            
         }
     }
 }

@@ -101,5 +101,13 @@ namespace mini_project
                 dataGridView1.DataSource = t;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            this.Hide();
+            d.Show();
+
+        }
     }
 }

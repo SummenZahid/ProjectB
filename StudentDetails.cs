@@ -99,5 +99,13 @@ namespace mini_project
             this.Hide();
             s.Show();     
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            d.Show();
+            this.Hide();
+          
+        }
     }
 }

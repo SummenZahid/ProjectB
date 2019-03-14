@@ -95,6 +95,9 @@
     <EmbeddedResource Include="CLO_details.resx">
       <DependentUpon>CLO_details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +138,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\141-1419589_apply-card-icon-college-student-icon-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\126-1268312_apply-card-icon-college-student-student-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -72,8 +72,12 @@ namespace mini_project
                 int row_index = e.RowIndex;
                 DataGridViewRow selectedRow = dataGridView1.Rows[row_index];
                 string a = Convert.ToString(selectedRow.Cells["Id"].Value);
+                string q2 = "DELETE FROM Rubric where CloId = '" + a + "'";
                 string query = "DELETE FROM Clo WHERE Id = '" + a + "'";
                 SqlCommand command = new SqlCommand(query, conn);
+                SqlCommand s = new SqlCommand(q2, conn);
+                s.ExecuteNonQuery();
+                MessageBox.Show("Rubrics deleted of this CLO");
                 command.ExecuteNonQuery();
                 MessageBox.Show("Row Deleted");
                 conn.Close();
@@ -109,6 +113,13 @@ namespace mini_project
             CLO s = new CLO();
             this.Hide();
             s.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            d.Show();
+            this.Hide();
         }
     }
 }

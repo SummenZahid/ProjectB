@@ -80,5 +80,34 @@ namespace mini_project
                 btn_submit.Text = "update";
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            d.Show();
+            this.Hide();
+        }
+
+        private void btn_student_Click(object sender, EventArgs e)
+        {
+            StudentDetails s = new StudentDetails();
+            s.Show();
+            this.Hide();
+        }
+
+        private void btn_rubric_Click(object sender, EventArgs e)
+        {
+            CLO_details r = new CLO_details();
+            MessageBox.Show("Select clo to add or show rubrics");
+            r.Show();
+            this.Hide();
+        }
+
+        private void btn_cloo_Click(object sender, EventArgs e)
+        {
+            CLO_details c = new CLO_details();
+            this.Hide();
+            c.Show();
+        }
     }
 }
