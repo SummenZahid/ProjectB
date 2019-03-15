@@ -99,6 +99,7 @@ namespace mini_project
                 DataGridViewRow selectedRow = dataGridView1.Rows[row_index];
                 string a = Convert.ToString(selectedRow.Cells["Id"].Value);
                 Rubrics r = new Rubrics(a);
+                this.Hide();
                 Rubric_details rr = new Rubric_details(a);
                 rr.Show();
                 CLO_details c = new CLO_details();

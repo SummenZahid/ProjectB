@@ -45,6 +45,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.error_msg = new System.Windows.Forms.Label();
             this.tableLayoutPanel4.SuspendLayout();
             this.nav.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -167,6 +168,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btn_submit, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(161, 3);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -183,8 +185,8 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel6.Controls.Add(this.lbl_name, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.btn_submit, 1, 2);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel9, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.error_msg, 1, 2);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(86, 3);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -213,14 +215,14 @@
             // btn_submit
             // 
             this.btn_submit.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_submit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_submit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_submit.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_submit.ForeColor = System.Drawing.Color.White;
-            this.btn_submit.Location = new System.Drawing.Point(119, 206);
+            this.btn_submit.Location = new System.Drawing.Point(86, 269);
             this.btn_submit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(269, 51);
+            this.btn_submit.Size = new System.Drawing.Size(390, 42);
             this.btn_submit.TabIndex = 1;
             this.btn_submit.Text = "Add CLOs";
             this.btn_submit.UseVisualStyleBackColor = false;
@@ -329,6 +331,18 @@
             this.label1.Text = "CLOs";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // error_msg
+            // 
+            this.error_msg.AutoSize = true;
+            this.error_msg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.error_msg.ForeColor = System.Drawing.Color.Red;
+            this.error_msg.Location = new System.Drawing.Point(120, 187);
+            this.error_msg.Name = "error_msg";
+            this.error_msg.Size = new System.Drawing.Size(267, 73);
+            this.error_msg.TabIndex = 7;
+            this.error_msg.Text = "Please fill the require field!";
+            this.error_msg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // CLO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -377,5 +391,6 @@
         private System.Windows.Forms.Button btn_rubric;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_cloo;
+        private System.Windows.Forms.Label error_msg;
     }
 }

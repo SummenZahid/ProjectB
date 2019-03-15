@@ -54,6 +54,7 @@
             this.txt_fname = new System.Windows.Forms.TextBox();
             this.cmb_status = new System.Windows.Forms.ComboBox();
             this.btn_submit = new System.Windows.Forms.Button();
+            this.error_msg = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -285,24 +286,26 @@
             this.tableLayoutPanel6.Controls.Add(this.label7, 0, 5);
             this.tableLayoutPanel6.Controls.Add(this.txt_fname, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.cmb_status, 1, 5);
+            this.tableLayoutPanel6.Controls.Add(this.error_msg, 1, 6);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(86, 3);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 6;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.6583F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66834F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66834F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66834F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66834F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66834F));
+            this.tableLayoutPanel6.RowCount = 7;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.25397F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.25397F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.25397F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.25397F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.25397F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.25397F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.47621F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(390, 260);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // txt_registration
             // 
             this.txt_registration.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_registration.Location = new System.Drawing.Point(119, 175);
+            this.txt_registration.Location = new System.Drawing.Point(119, 151);
             this.txt_registration.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_registration.Name = "txt_registration";
             this.txt_registration.Size = new System.Drawing.Size(269, 30);
@@ -311,7 +314,7 @@
             // txt_email
             // 
             this.txt_email.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_email.Location = new System.Drawing.Point(119, 132);
+            this.txt_email.Location = new System.Drawing.Point(119, 114);
             this.txt_email.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(269, 30);
@@ -320,7 +323,7 @@
             // txt_contact
             // 
             this.txt_contact.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_contact.Location = new System.Drawing.Point(119, 89);
+            this.txt_contact.Location = new System.Drawing.Point(119, 77);
             this.txt_contact.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(269, 30);
@@ -329,7 +332,7 @@
             // txt_lname
             // 
             this.txt_lname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_lname.Location = new System.Drawing.Point(119, 46);
+            this.txt_lname.Location = new System.Drawing.Point(119, 40);
             this.txt_lname.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(269, 30);
@@ -343,7 +346,7 @@
             this.label2.Location = new System.Drawing.Point(2, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 43);
+            this.label2.Size = new System.Drawing.Size(113, 37);
             this.label2.TabIndex = 0;
             this.label2.Text = "FirstName:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -353,10 +356,10 @@
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 43);
+            this.label3.Location = new System.Drawing.Point(2, 37);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 43);
+            this.label3.Size = new System.Drawing.Size(113, 37);
             this.label3.TabIndex = 1;
             this.label3.Text = "LastName:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -366,10 +369,10 @@
             this.lbl_contact.AutoSize = true;
             this.lbl_contact.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_contact.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_contact.Location = new System.Drawing.Point(2, 86);
+            this.lbl_contact.Location = new System.Drawing.Point(2, 74);
             this.lbl_contact.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_contact.Name = "lbl_contact";
-            this.lbl_contact.Size = new System.Drawing.Size(113, 43);
+            this.lbl_contact.Size = new System.Drawing.Size(113, 37);
             this.lbl_contact.TabIndex = 2;
             this.lbl_contact.Text = "Contact:";
             this.lbl_contact.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -379,10 +382,10 @@
             this.lbl_email.AutoSize = true;
             this.lbl_email.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_email.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_email.Location = new System.Drawing.Point(2, 129);
+            this.lbl_email.Location = new System.Drawing.Point(2, 111);
             this.lbl_email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(113, 43);
+            this.lbl_email.Size = new System.Drawing.Size(113, 37);
             this.lbl_email.TabIndex = 3;
             this.lbl_email.Text = "Email:";
             this.lbl_email.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -392,10 +395,10 @@
             this.lbl_reg.AutoSize = true;
             this.lbl_reg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_reg.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_reg.Location = new System.Drawing.Point(2, 172);
+            this.lbl_reg.Location = new System.Drawing.Point(2, 148);
             this.lbl_reg.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_reg.Name = "lbl_reg";
-            this.lbl_reg.Size = new System.Drawing.Size(113, 43);
+            this.lbl_reg.Size = new System.Drawing.Size(113, 37);
             this.lbl_reg.TabIndex = 4;
             this.lbl_reg.Text = "Registration Number:";
             this.lbl_reg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -405,10 +408,10 @@
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(2, 215);
+            this.label7.Location = new System.Drawing.Point(2, 185);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 45);
+            this.label7.Size = new System.Drawing.Size(113, 37);
             this.label7.TabIndex = 5;
             this.label7.Text = "Status:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -430,7 +433,7 @@
             this.cmb_status.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.cmb_status.Location = new System.Drawing.Point(119, 218);
+            this.cmb_status.Location = new System.Drawing.Point(119, 188);
             this.cmb_status.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_status.Name = "cmb_status";
             this.cmb_status.Size = new System.Drawing.Size(269, 30);
@@ -451,6 +454,18 @@
             this.btn_submit.Text = "Submit";
             this.btn_submit.UseVisualStyleBackColor = false;
             this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
+            // 
+            // error_msg
+            // 
+            this.error_msg.AutoSize = true;
+            this.error_msg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.error_msg.ForeColor = System.Drawing.Color.Red;
+            this.error_msg.Location = new System.Drawing.Point(120, 222);
+            this.error_msg.Name = "error_msg";
+            this.error_msg.Size = new System.Drawing.Size(267, 38);
+            this.error_msg.TabIndex = 12;
+            this.error_msg.Text = "Please fill the require field!";
+            this.error_msg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Student
             // 
@@ -507,6 +522,7 @@
         private System.Windows.Forms.Button btn_rubric;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_cloo;
+        private System.Windows.Forms.Label error_msg;
     }
 }
 

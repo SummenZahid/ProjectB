@@ -28,45 +28,54 @@ namespace mini_project
         }
         private void btn_submit_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
-            if (update == 1)
+            if (txt_name.Text != "")
             {
-                conn.Open();
-                string query2 = "Update Clo set Name = '" + txt_name.Text + " ', DateCreated = '" + DateTime.Today + "' , DateUpdated = '" + DateTime.Now + "' where Id = '" + this.id + "'";
-                SqlCommand update_command = new SqlCommand(query2, conn);
-                int j = update_command.ExecuteNonQuery();
-                if (j != 0)
+                SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
+                if (update == 1)
                 {
-                    MessageBox.Show("CLO Record Updated Successfully");
-                    CLO ff = new CLO();
-                    ff.Close();
-                    CLO_details ss = new CLO_details();
-                    ss.Show();
-                    this.Hide();
+                    conn.Open();
+                    string query2 = "Update Clo set Name = '" + txt_name.Text + " ', DateCreated = '" + DateTime.Today + "' , DateUpdated = '" + DateTime.Now + "' where Id = '" + this.id + "'";
+                    SqlCommand update_command = new SqlCommand(query2, conn);
+                    int j = update_command.ExecuteNonQuery();
+                    if (j != 0)
+                    {
+                        MessageBox.Show("CLO Record Updated Successfully");
+                        CLO ff = new CLO();
+                        ff.Close();
+                        CLO_details ss = new CLO_details();
+                        ss.Show();
+                        this.Hide();
+                    }
+                    conn.Close();
                 }
-                conn.Close();
+                else
+                {
+                    conn.Open();
+                    string query = "Insert into Clo (Name, DateCreated, DateUpdated) values('" + txt_name.Text + "', '" + DateTime.Today + "', '" + DateTime.Now + "')";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    int i = command.ExecuteNonQuery();
+                    if (i != 0)
+                    {
+                        MessageBox.Show("CLO Record Inserted Successfully");
+                        CLO f = new CLO();
+                        f.Close();
+                        CLO_details s = new CLO_details();
+                        this.Hide();
+                        s.Show();
+                    }
+                    conn.Close();
+                }
             }
             else
             {
-                conn.Open();
-                string query = "Insert into Clo (Name, DateCreated, DateUpdated) values('" + txt_name.Text + "', '" + DateTime.Today + "', '" + DateTime.Now + "')";
-                SqlCommand command = new SqlCommand(query, conn);
-                int i = command.ExecuteNonQuery();
-                if (i != 0)
-                {
-                    MessageBox.Show("CLO Record Inserted Successfully");
-                    CLO f = new CLO();
-                    f.Close();
-                    CLO_details s = new CLO_details();
-                    this.Hide();
-                    s.Show();
-                }
-                conn.Close();
+                error_msg.Show();
             }
+           
         }
 
         private void CLO_Load(object sender, EventArgs e)
         {
+            error_msg.Hide();
             if (update == 1)
             {
                 btn_submit.Text = "update";

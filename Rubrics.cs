@@ -35,49 +35,79 @@ namespace mini_project
         }
         private void btn_submit_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
-            if (update == 1)
+            if (txt_details.Text != "" )
             {
-                conn.Open();
-                string query2 = "Update Rubric set Details = '" + txt_details.Text + " '  where Id = '" + this.id + "'";
-                SqlCommand update_command = new SqlCommand(query2, conn);
-                int j = update_command.ExecuteNonQuery();
-                if (j != 0)
+                SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
+                if (update == 1)
                 {
-                    MessageBox.Show("Rubrics Record Updated Successfully");
-                    Rubrics ff = new Rubrics();
-                    ff.Close();
-                    Rubric_details ss = new Rubric_details(clo_id);
-                    ss.Show();
-                    this.Hide();
+                    conn.Open();
+                    string CloId = (cmb_clo_ID.SelectedItem as ComboboxItem).Value.ToString();
+                    string query2 = "Update Rubric set Details = '" + txt_details.Text + " ', CloId = '" + CloId + " '  where Id = '" + this.id + "'";
+                    SqlCommand update_command = new SqlCommand(query2, conn);
+                    int j = update_command.ExecuteNonQuery();
+                    if (j != 0)
+                    {
+                        MessageBox.Show("Rubrics Record Updated Successfully");
+                        Rubrics ff = new Rubrics();
+                        ff.Close();
+                        Rubric_details ss = new Rubric_details(clo_id);
+                        ss.Show();
+                        this.Hide();
+                    }
+                    conn.Close();
                 }
-                conn.Close();
+                else
+                {
+                    cmb_clo_ID.Hide();
+                    conn.Open();
+                    string query = "Insert into Rubric (Details,CloId) values('" + txt_details.Text + "','" + this.clo_id + "' )";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    int i = command.ExecuteNonQuery();
+                    if (i != 0)
+                    {
+                        MessageBox.Show("Rubrics Record Inserted Successfully");
+                        Rubrics f = new Rubrics();
+                        f.Close();
+                        Rubric_details s = new Rubric_details(clo_id);
+                        this.Hide();
+                        s.Show();
+                    }
+                    conn.Close();
+                }
             }
             else
             {
-                conn.Open();
-                string query = "Insert into Rubric (Details,CloId) values('" + txt_details.Text + "','" + this.clo_id + "' )";
-                SqlCommand command = new SqlCommand(query, conn);
-                int i = command.ExecuteNonQuery();
-                MessageBox.Show(query);
-                if (i != 0)
-                {
-                    MessageBox.Show("Rubrics Record Inserted Successfully");
-                    Rubrics f = new Rubrics();
-                    f.Close();
-                    Rubric_details s = new Rubric_details(clo_id);
-                    this.Hide();
-                    s.Show();
-                }
-                conn.Close();
+                error_msg.Show();
             }
+           
         }
 
         private void Rubrics_Load(object sender, EventArgs e)
         {
+            error_msg.Hide();
             if (update == 1)
             {
                 btn_submit.Text = "update";
+                cmb_clo_ID.Show();
+                SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
+                conn.Open();
+                string query1 = "Select * from Clo";
+                SqlCommand command = new SqlCommand(query1, conn);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        ComboboxItem item = new ComboboxItem();
+                        item.Text = Convert.ToString(reader["Name"]);
+                        item.Value = Convert.ToString(reader["Id"]); ;
+
+                        cmb_clo_ID.Items.Add(item);
+                    }
+                }
+            }
+            else
+            {
+                cmb_clo_ID.Hide();
             }
         }
 

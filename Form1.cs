@@ -49,54 +49,63 @@ namespace mini_project
 
         private void btn_submit_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
-            int LookupId = 5;
-            if (cmb_status.Text == "Active")
+            if (txt_fname.Text != "" && txt_lname.Text != "" && txt_contact.Text != "" && txt_email.Text != "" && txt_registration.Text != "" && cmb_status.Text != "" )
             {
-                LookupId = 5;
+                SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
+                int LookupId = 5;
+                if (cmb_status.Text == "Active")
+                {
+                    LookupId = 5;
+                }
+                else
+                {
+                    LookupId = 6;
+                }
+                if (update == 1)
+                {
+                    conn.Open();
+                    string query2 = "Update Student set FirstName = '" + txt_fname.Text + " ', LastName = '" + txt_lname.Text + "' , Contact = '" + txt_contact.Text + "', Email = '" + txt_email.Text + "' , RegistrationNumber= '" + txt_registration.Text + " ', Status = '" + LookupId + "' where Id = '" + this.id + "'";
+                    SqlCommand update_command = new SqlCommand(query2, conn);
+                    int j = update_command.ExecuteNonQuery();
+                    if (j != 0)
+                    {
+                        MessageBox.Show("Student Record Updated Successfully");
+                        Student ff = new Student();
+                        ff.Close();
+                        StudentDetails ss = new StudentDetails();
+                        ss.Show();
+                        this.Hide();
+                    }
+                    conn.Close();
+                }
+                else
+                {
+                    conn.Open();
+                    string query = "Insert into Student (FirstName, LastName, Contact, Email, RegistrationNumber, Status) values('" + txt_fname.Text + "', '" + txt_lname.Text + "', '" + txt_contact.Text + "', '" + txt_email.Text + "', '" + txt_registration.Text + "', '" + LookupId + "')";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    int i = command.ExecuteNonQuery();
+                    if (i != 0)
+                    {
+                        MessageBox.Show("Student Record Inserted Successfully");
+                        Student f = new Student();
+                        f.Close();
+                        StudentDetails s = new StudentDetails();
+                        this.Hide();
+                        s.Show();
+                    }
+                    conn.Close();
+                }
             }
             else
             {
-                LookupId = 6;
+                error_msg.Show();
             }
-            if (update == 1)
-            {
-                conn.Open();
-                string query2 = "Update Student set FirstName = '" + txt_fname.Text + " ', LastName = '" + txt_lname.Text + "' , Contact = '" + txt_contact.Text + "', Email = '" + txt_email.Text + "' , RegistrationNumber= '" + txt_registration.Text + " ', Status = '" + LookupId + "' where Id = '" + this.id + "'";
-                SqlCommand update_command = new SqlCommand(query2, conn);
-                int j = update_command.ExecuteNonQuery();
-                if (j != 0)
-                {
-                    MessageBox.Show("Student Record Updated Successfully");
-                    Student ff = new Student();
-                    ff.Close();
-                    StudentDetails ss = new StudentDetails();
-                    ss.Show();
-                    this.Hide();
-                }
-                conn.Close();
-            }
-            else
-            {
-                conn.Open();
-                string query = "Insert into Student (FirstName, LastName, Contact, Email, RegistrationNumber, Status) values('" + txt_fname.Text + "', '" + txt_lname.Text + "', '" + txt_contact.Text + "', '" + txt_email.Text + "', '" + txt_registration.Text + "', '" + LookupId + "')";
-                SqlCommand command = new SqlCommand(query, conn);
-                int i = command.ExecuteNonQuery();
-                if (i != 0)
-                {
-                    MessageBox.Show("Student Record Inserted Successfully");
-                    Student f = new Student();
-                    f.Close();
-                    StudentDetails s = new StudentDetails();
-                    this.Hide();
-                    s.Show();
-                }
-                conn.Close();
-            }
+           
         }
 
         private void Student_Load(object sender, EventArgs e)
         {
+            error_msg.Hide();
             if (update == 1)
             {
                 btn_submit.Text = "update";

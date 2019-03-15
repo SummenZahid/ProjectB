@@ -57,6 +57,7 @@
     <Compile Include="CLO_details.Designer.cs">
       <DependentUpon>CLO_details.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComboboxItem.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
