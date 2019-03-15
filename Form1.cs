@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
+
 namespace mini_project
 {
     public partial class Student : Form
@@ -49,7 +51,8 @@ namespace mini_project
 
         private void btn_submit_Click(object sender, EventArgs e)
         {
-            if (txt_fname.Text != "" && txt_lname.Text != "" && txt_contact.Text != "" && txt_email.Text != "" && txt_registration.Text != "" && cmb_status.Text != "" )
+            Regex reg = new Regex(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
+            if (txt_fname.Text != "" && txt_lname.Text != "" && txt_contact.Text != "" && txt_email.Text != "" && txt_registration.Text != "" && cmb_status.Text != "" && reg.IsMatch(txt_email.Text) && txt_contact.Text.All(c => char.IsDigit(c))) 
             {
                 SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
                 int LookupId = 5;
@@ -98,6 +101,18 @@ namespace mini_project
             }
             else
             {
+                if (!txt_contact.Text.All(c => char.IsDigit(c) && txt_contact.Text != ""))
+                {
+                    error_msg.Text = "Contact Number Must Be Digits";
+                }
+                else if (!reg.IsMatch(txt_email.Text) && txt_email.Text != "")
+                {
+                    error_msg.Text = "Email is not in correct format";
+                }
+                else
+                {
+                    error_msg.Text = "Please Fill In All The Required Fields";
+                }
                 error_msg.Show();
             }
            

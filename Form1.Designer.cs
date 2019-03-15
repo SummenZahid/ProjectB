@@ -53,8 +53,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txt_fname = new System.Windows.Forms.TextBox();
             this.cmb_status = new System.Windows.Forms.ComboBox();
-            this.btn_submit = new System.Windows.Forms.Button();
             this.error_msg = new System.Windows.Forms.Label();
+            this.btn_submit = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -439,6 +439,18 @@
             this.cmb_status.Size = new System.Drawing.Size(269, 30);
             this.cmb_status.TabIndex = 11;
             // 
+            // error_msg
+            // 
+            this.error_msg.AutoSize = true;
+            this.error_msg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.error_msg.ForeColor = System.Drawing.Color.Red;
+            this.error_msg.Location = new System.Drawing.Point(120, 222);
+            this.error_msg.Name = "error_msg";
+            this.error_msg.Size = new System.Drawing.Size(267, 38);
+            this.error_msg.TabIndex = 12;
+            this.error_msg.Text = "Please fill the require field!";
+            this.error_msg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btn_submit
             // 
             this.btn_submit.BackColor = System.Drawing.Color.DodgerBlue;
@@ -454,18 +466,6 @@
             this.btn_submit.Text = "Submit";
             this.btn_submit.UseVisualStyleBackColor = false;
             this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
-            // 
-            // error_msg
-            // 
-            this.error_msg.AutoSize = true;
-            this.error_msg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.error_msg.ForeColor = System.Drawing.Color.Red;
-            this.error_msg.Location = new System.Drawing.Point(120, 222);
-            this.error_msg.Name = "error_msg";
-            this.error_msg.Size = new System.Drawing.Size(267, 38);
-            this.error_msg.TabIndex = 12;
-            this.error_msg.Text = "Please fill the require field!";
-            this.error_msg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Student
             // 
