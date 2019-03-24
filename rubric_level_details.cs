@@ -11,24 +11,30 @@ using System.Data.SqlClient;
 
 namespace mini_project
 {
-    public partial class Rubric_details : Form
+    public partial class rubric_level_details : Form
     {
-        string clo_id;
-        public Rubric_details()
+        string rubric_id;
+        public rubric_level_details()
         {
             InitializeComponent();
         }
-        public Rubric_details(string id)
+        public rubric_level_details(string id)
         {
             InitializeComponent();
-            this.clo_id = id;
+            this.rubric_id = id;
 
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void rubric_level_details_Load(object sender, EventArgs e)
         {
-            Rubrics r = new Rubrics(clo_id);
-            r.Show();
-            this.Hide();
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
+            conn.Open();
+            string query = "select * from RubricLevel where RubricId = '" + this.rubric_id + "' ";
+            using (SqlDataAdapter a = new SqlDataAdapter(query, conn))
+            {
+                DataTable t = new DataTable();
+                a.Fill(t);
+                dataGridView1.DataSource = t;
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -46,22 +52,23 @@ namespace mini_project
                 values = new string[7];
                 using (SqlConnection con = new SqlConnection("Data Source = DESKTOP - M9PBVHQ; Initial Catalog = ProjectB; Integrated Security = True"))
                 {
-                    string oString = "Select * from Rubric where Id='" + a + "'";
+                    string oString = "Select * from RubricLevel where Id='" + a + "'";
                     SqlCommand oCmd = new SqlCommand(oString, conn);
                     using (SqlDataReader oReader = oCmd.ExecuteReader())
                     {
                         while (oReader.Read())
                         {
                             values[0] = oReader["Id"].ToString();
-                            values[1] = oReader["Details"].ToString();
-                            values[2] = oReader["CloId"].ToString();
+                            values[1] = oReader["RubricId"].ToString();
+                            values[2] = oReader["Details"].ToString();
+                            values[3] = oReader["MeasurementLevel"].ToString();
                             break;
                         }
 
                         conn.Close();
                     }
                 }
-                Rubrics s = new Rubrics(values[0], values[1], values[2]);
+                Rubrics_Level s = new Rubrics_Level(values[0], values[1], values[2],values[3]);
                 this.Hide();
                 s.Show();
             }
@@ -71,7 +78,7 @@ namespace mini_project
                 int row_index = e.RowIndex;
                 DataGridViewRow selectedRow = dataGridView1.Rows[row_index];
                 string a = Convert.ToString(selectedRow.Cells["Id"].Value);
-                string query = "DELETE FROM Rubric WHERE Id = '" + a + "'";
+                string query = "DELETE FROM RubricLevel WHERE Id = '" + a + "'";
                 SqlCommand command = new SqlCommand(query, conn);
                 command.ExecuteNonQuery();
                 MessageBox.Show("Row Deleted");
@@ -79,7 +86,7 @@ namespace mini_project
 
                 SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
                 conn.Open();
-                string query1 = "select * from Rubric where CloId = '" + this.clo_id + "'  ";
+                string query1 = "select * from RubricLevel where RubricId = '" + this.rubric_id + "'  ";
                 using (SqlDataAdapter am = new SqlDataAdapter(query1, cnn))
                 {
                     DataTable t = new DataTable();
@@ -87,41 +94,20 @@ namespace mini_project
                     dataGridView1.DataSource = t;
                 }
             }
-            else if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-                        e.RowIndex >= 0 && e.ColumnIndex == 2)
-            {
-                int row_index = e.RowIndex;
-                DataGridViewRow selectedRow = dataGridView1.Rows[row_index];
-                string a = Convert.ToString(selectedRow.Cells["Id"].Value);
-                Rubrics_Level r = new Rubrics_Level(a);
-                this.Hide();
-                rubric_level_details rr = new rubric_level_details(a);
-                rr.Show();
-                Rubric_details c = new Rubric_details();
-                c.Hide();
-
-            }
         }
 
-        private void Rubric_details_Load(object sender, EventArgs e)
+        private void btn_new_level_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
-            conn.Open();
-            string query = "select * from Rubric where CloId = '" + this.clo_id + "' ";
-            using (SqlDataAdapter a = new SqlDataAdapter(query, conn))
-            {
-                DataTable t = new DataTable();
-                a.Fill(t);
-                dataGridView1.DataSource = t;
-            }
+            Rubrics_Level r = new Rubrics_Level(rubric_id);
+            r.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Dashboard d = new Dashboard();
-            this.Hide();
             d.Show();
-
+            this.Hide();
         }
     }
 }

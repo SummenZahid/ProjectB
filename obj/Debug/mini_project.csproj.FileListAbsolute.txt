@@ -14,3 +14,5 @@ C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini
 C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.Rubrics.resources
 C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.Rubric_details.resources
 C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.Dashboard.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.Rubrics_Level.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.rubric_level_details.resources

@@ -38,5 +38,12 @@ namespace mini_project
             this.Hide();
             MessageBox.Show("Select CLO to add rubrics");
         }
+
+        private void btn_level_Click(object sender, EventArgs e)
+        {
+            Rubrics_Level r = new Rubrics_Level() ;
+            r.Show();
+
+        }
     }
 }

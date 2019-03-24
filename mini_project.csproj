@@ -78,11 +78,23 @@
     <Compile Include="Rubrics.Designer.cs">
       <DependentUpon>Rubrics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Rubrics_Level.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rubrics_Level.Designer.cs">
+      <DependentUpon>Rubrics_Level.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rubric_details.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Rubric_details.Designer.cs">
       <DependentUpon>Rubric_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rubric_level_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rubric_level_details.Designer.cs">
+      <DependentUpon>rubric_level_details.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentDetails.cs">
       <SubType>Form</SubType>
@@ -115,8 +127,14 @@
     <EmbeddedResource Include="Rubrics.resx">
       <DependentUpon>Rubrics.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Rubrics_Level.resx">
+      <DependentUpon>Rubrics_Level.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Rubric_details.resx">
       <DependentUpon>Rubric_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rubric_level_details.resx">
+      <DependentUpon>rubric_level_details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentDetails.resx">
       <DependentUpon>StudentDetails.cs</DependentUpon>
