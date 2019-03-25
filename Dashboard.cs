@@ -41,8 +41,9 @@ namespace mini_project
 
         private void btn_level_Click(object sender, EventArgs e)
         {
-            Rubrics_Level r = new Rubrics_Level() ;
+           assessment_details r = new assessment_details() ;
             r.Show();
+            this.Hide();
 
         }
     }

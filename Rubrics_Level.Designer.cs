@@ -37,21 +37,21 @@
             this.btn_cloo = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_details = new System.Windows.Forms.RichTextBox();
-            this.cmb_rubric_ID = new System.Windows.Forms.ComboBox();
             this.error_msg = new System.Windows.Forms.Label();
+            this.cmb_rubric_ID = new System.Windows.Forms.ComboBox();
+            this.cmb_level = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmb_level = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4.SuspendLayout();
             this.nav.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_submit
@@ -122,6 +122,7 @@
             this.btn_student.TabIndex = 3;
             this.btn_student.Text = "Student";
             this.btn_student.UseVisualStyleBackColor = false;
+            this.btn_student.Click += new System.EventHandler(this.btn_student_Click);
             // 
             // btn_rubric
             // 
@@ -138,6 +139,7 @@
             this.btn_rubric.TabIndex = 4;
             this.btn_rubric.Text = "Rubric";
             this.btn_rubric.UseVisualStyleBackColor = false;
+            this.btn_rubric.Click += new System.EventHandler(this.btn_rubric_Click);
             // 
             // button3
             // 
@@ -154,6 +156,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "Dashboard";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_cloo
             // 
@@ -170,6 +173,7 @@
             this.btn_cloo.TabIndex = 6;
             this.btn_cloo.Text = "CLO";
             this.btn_cloo.UseVisualStyleBackColor = false;
+            this.btn_cloo.Click += new System.EventHandler(this.btn_cloo_Click);
             // 
             // tableLayoutPanel5
             // 
@@ -204,6 +208,18 @@
             this.txt_details.TabIndex = 4;
             this.txt_details.Text = "";
             // 
+            // error_msg
+            // 
+            this.error_msg.AutoSize = true;
+            this.error_msg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.error_msg.ForeColor = System.Drawing.Color.Red;
+            this.error_msg.Location = new System.Drawing.Point(118, 278);
+            this.error_msg.Name = "error_msg";
+            this.error_msg.Size = new System.Drawing.Size(329, 36);
+            this.error_msg.TabIndex = 6;
+            this.error_msg.Text = "Please fill all the require fields!";
+            this.error_msg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // cmb_rubric_ID
             // 
             this.cmb_rubric_ID.BackColor = System.Drawing.SystemColors.Window;
@@ -216,17 +232,22 @@
             this.cmb_rubric_ID.Size = new System.Drawing.Size(329, 31);
             this.cmb_rubric_ID.TabIndex = 5;
             // 
-            // error_msg
+            // cmb_level
             // 
-            this.error_msg.AutoSize = true;
-            this.error_msg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.error_msg.ForeColor = System.Drawing.Color.Red;
-            this.error_msg.Location = new System.Drawing.Point(118, 278);
-            this.error_msg.Name = "error_msg";
-            this.error_msg.Size = new System.Drawing.Size(329, 36);
-            this.error_msg.TabIndex = 6;
-            this.error_msg.Text = "Please fill all the require fields!";
-            this.error_msg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cmb_level.BackColor = System.Drawing.SystemColors.Window;
+            this.cmb_level.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmb_level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_level.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_level.FormattingEnabled = true;
+            this.cmb_level.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.cmb_level.Location = new System.Drawing.Point(118, 160);
+            this.cmb_level.Name = "cmb_level";
+            this.cmb_level.Size = new System.Drawing.Size(329, 31);
+            this.cmb_level.TabIndex = 7;
             // 
             // tableLayoutPanel1
             // 
@@ -261,6 +282,19 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(726, 59);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::mini_project.Properties.Resources.student_1_512;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -292,36 +326,6 @@
             this.label1.Text = "Rubric Levels";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cmb_level
-            // 
-            this.cmb_level.BackColor = System.Drawing.SystemColors.Window;
-            this.cmb_level.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmb_level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_level.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_level.FormattingEnabled = true;
-            this.cmb_level.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.cmb_level.Location = new System.Drawing.Point(118, 160);
-            this.cmb_level.Name = "cmb_level";
-            this.cmb_level.Size = new System.Drawing.Size(329, 31);
-            this.cmb_level.TabIndex = 7;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::mini_project.Properties.Resources.student_1_512;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 53);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // Rubrics_Level
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -329,7 +333,7 @@
             this.ClientSize = new System.Drawing.Size(730, 391);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Rubrics_Level";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rubrics_Level";
@@ -340,9 +344,9 @@
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

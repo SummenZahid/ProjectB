@@ -37,26 +37,30 @@ namespace mini_project
         }
         private void btn_submit_Click(object sender, EventArgs e)
         {
-            if (txt_details.Text != "")
+            if (txt_details.Text != "" && cmb_level.Text != "")
             {
                 SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
-                if (update == 1)
+                if (update == 1 )
                 {
-                    conn.Open();
-                    string RubricID = (cmb_rubric_ID.SelectedItem as ComboboxItem).Value.ToString();
-                    string query2 = "Update RubricLevel set RubricId = '" + RubricID + " ',  Details = '" + txt_details.Text + " ', MeasurementLevel = '" + cmb_level.Text + " '  where Id = '" + this.id + "'";
-                    SqlCommand update_command = new SqlCommand(query2, conn);
-                    int j = update_command.ExecuteNonQuery();
-                    if (j != 0)
+                    if (cmb_rubric_ID.Text != "")
                     {
-                        MessageBox.Show("Rubrics_Level Record Updated Successfully");
-                        Rubrics_Level ff = new Rubrics_Level();
-                        ff.Close();
-                        rubric_level_details ss = new rubric_level_details(rubric_id);
-                        ss.Show();
-                        this.Hide();
+                        conn.Open();
+                        string RubricID = (cmb_rubric_ID.SelectedItem as ComboboxItem).Value.ToString();
+                        string query2 = "Update RubricLevel set RubricId = '" + RubricID + " ',  Details = '" + txt_details.Text + " ', MeasurementLevel = '" + cmb_level.Text + " '  where Id = '" + this.id + "'";
+                        SqlCommand update_command = new SqlCommand(query2, conn);
+                        int j = update_command.ExecuteNonQuery();
+                        if (j != 0)
+                        {
+                            MessageBox.Show("Rubrics_Level Record Updated Successfully");
+                            Rubrics_Level ff = new Rubrics_Level();
+                            ff.Close();
+                            rubric_level_details ss = new rubric_level_details(rubric_id);
+                            ss.Show();
+                            this.Hide();
+                        }
+                        conn.Close();
                     }
-                    conn.Close();
+                    error_msg.Show();
                 }
                 else
                 {
@@ -110,6 +114,34 @@ namespace mini_project
             {
                 cmb_rubric_ID.Hide();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            d.Show();
+            this.Hide();
+        }
+
+        private void btn_student_Click(object sender, EventArgs e)
+        {
+            Student d = new Student();
+            d.Show();
+            this.Hide();
+        }
+
+        private void btn_rubric_Click(object sender, EventArgs e)
+        {
+            CLO_details d = new CLO_details();
+            d.Show();
+            this.Hide();
+        }
+
+        private void btn_cloo_Click(object sender, EventArgs e)
+        {
+            CLO_details d = new CLO_details();
+            d.Show();
+            this.Hide();
         }
     }
 }

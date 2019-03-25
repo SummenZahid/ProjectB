@@ -38,23 +38,31 @@ namespace mini_project
             if (txt_details.Text != "" )
             {
                 SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
-                if (update == 1)
+                if (update == 1 )
                 {
-                    conn.Open();
-                    string CloId = (cmb_clo_ID.SelectedItem as ComboboxItem).Value.ToString();
-                    string query2 = "Update Rubric set Details = '" + txt_details.Text + " ', CloId = '" + CloId + " '  where Id = '" + this.id + "'";
-                    SqlCommand update_command = new SqlCommand(query2, conn);
-                    int j = update_command.ExecuteNonQuery();
-                    if (j != 0)
+                    if(cmb_clo_ID.Text != "")
                     {
-                        MessageBox.Show("Rubrics Record Updated Successfully");
-                        Rubrics ff = new Rubrics();
-                        ff.Close();
-                        Rubric_details ss = new Rubric_details(clo_id);
-                        ss.Show();
-                        this.Hide();
+                        conn.Open();
+                        string CloId = (cmb_clo_ID.SelectedItem as ComboboxItem).Value.ToString();
+                        string query2 = "Update Rubric set Details = '" + txt_details.Text + " ', CloId = '" + CloId + " '  where Id = '" + this.id + "'";
+                        SqlCommand update_command = new SqlCommand(query2, conn);
+                        int j = update_command.ExecuteNonQuery();
+                        if (j != 0)
+                        {
+                            MessageBox.Show("Rubrics Record Updated Successfully");
+                            Rubrics ff = new Rubrics();
+                            ff.Close();
+                            Rubric_details ss = new Rubric_details(clo_id);
+                            ss.Show();
+                            this.Hide();
+                        }
+                        conn.Close();
                     }
-                    conn.Close();
+                    else
+                    {
+                        error_msg.Show();
+                    }
+                    
                 }
                 else
                 {

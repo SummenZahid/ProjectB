@@ -15,6 +15,7 @@ namespace mini_project
     {
         string id;
         int update;
+        string date;
         public CLO()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace mini_project
             InitializeComponent();
             id = Id;
             txt_name.Text = name;
+            date = date_created;
             update = 1;
         }
         private void btn_submit_Click(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace mini_project
                 if (update == 1)
                 {
                     conn.Open();
-                    string query2 = "Update Clo set Name = '" + txt_name.Text + " ', DateCreated = '" + DateTime.Today + "' , DateUpdated = '" + DateTime.Now + "' where Id = '" + this.id + "'";
+                    string query2 = "Update Clo set Name = '" + txt_name.Text + " ', DateCreated = '" + this.date + "' , DateUpdated = '" + DateTime.Today + "' where Id = '" + this.id + "'";
                     SqlCommand update_command = new SqlCommand(query2, conn);
                     int j = update_command.ExecuteNonQuery();
                     if (j != 0)

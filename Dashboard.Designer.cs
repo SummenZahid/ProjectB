@@ -44,14 +44,14 @@
             this.btn_student = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_level = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.btn_level = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -309,6 +309,22 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(170, 152);
             this.tableLayoutPanel8.TabIndex = 3;
             // 
+            // btn_level
+            // 
+            this.btn_level.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_level.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_level.FlatAppearance.BorderSize = 0;
+            this.btn_level.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_level.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_level.ForeColor = System.Drawing.Color.White;
+            this.btn_level.Location = new System.Drawing.Point(3, 109);
+            this.btn_level.Name = "btn_level";
+            this.btn_level.Size = new System.Drawing.Size(164, 40);
+            this.btn_level.TabIndex = 3;
+            this.btn_level.Text = "Assessment";
+            this.btn_level.UseVisualStyleBackColor = false;
+            this.btn_level.Click += new System.EventHandler(this.btn_level_Click);
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -334,6 +350,21 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(170, 152);
             this.tableLayoutPanel9.TabIndex = 4;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Tomato;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(3, 109);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(164, 40);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Students";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // pictureBox6
             // 
@@ -361,48 +392,6 @@
             this.tableLayoutPanel10.Size = new System.Drawing.Size(170, 152);
             this.tableLayoutPanel10.TabIndex = 5;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox7.Image = global::mini_project.Properties.Resources.checkbox_icon;
-            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(164, 100);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 2;
-            this.pictureBox7.TabStop = false;
-            // 
-            // btn_level
-            // 
-            this.btn_level.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_level.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_level.FlatAppearance.BorderSize = 0;
-            this.btn_level.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_level.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_level.ForeColor = System.Drawing.Color.White;
-            this.btn_level.Location = new System.Drawing.Point(3, 109);
-            this.btn_level.Name = "btn_level";
-            this.btn_level.Size = new System.Drawing.Size(164, 40);
-            this.btn_level.TabIndex = 3;
-            this.btn_level.Text = "Rubric Level";
-            this.btn_level.UseVisualStyleBackColor = false;
-            this.btn_level.Click += new System.EventHandler(this.btn_level_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Tomato;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(3, 109);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 40);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Students";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.LimeGreen;
@@ -417,6 +406,17 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Rubrics";
             this.button4.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox7.Image = global::mini_project.Properties.Resources.checkbox_icon;
+            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(164, 100);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 2;
+            this.pictureBox7.TabStop = false;
             // 
             // Dashboard
             // 

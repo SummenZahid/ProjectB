@@ -45,6 +45,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="assessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assessment.Designer.cs">
+      <DependentUpon>assessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assessment_comp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assessment_comp.Designer.cs">
+      <DependentUpon>assessment_comp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assessment_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assessment_details.Designer.cs">
+      <DependentUpon>assessment_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="assess_comp_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assess_comp_detail.Designer.cs">
+      <DependentUpon>assess_comp_detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="CLO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +126,18 @@
     <Compile Include="StudentDetails.Designer.cs">
       <DependentUpon>StudentDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="assessment.resx">
+      <DependentUpon>assessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assessment_comp.resx">
+      <DependentUpon>assessment_comp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assessment_details.resx">
+      <DependentUpon>assessment_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assess_comp_detail.resx">
+      <DependentUpon>assess_comp_detail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CLO.resx">
       <DependentUpon>CLO.cs</DependentUpon>
     </EmbeddedResource>
