@@ -45,13 +45,13 @@ namespace mini_project
                 SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
                 if (update == 1)
                 {
-                    lbl_assess.Show();
                     if (cmb_assessID.Text != "")
                     {
                         
                         conn.Open();
-                        string AssessID = (cmb_assessID.SelectedItem as ComboboxItem).Value.ToString();
-                        string query2 = "Update AssessmentComponent set Name = '" + txt_name.Text + " ', RubricId = '" + cmb_rubric.Text + " ', TotalMarks = '" + txt_marks.Text + " ' , DateCreated = '" + this.date + " ' , DateUpdated = '" + DateTime.Today + " ', AssessmentId = '" + cmb_assessID.Text + " '   where Id = '" + this.id + "'";
+                        string RubricID = (cmb_rubric.SelectedItem as ComboboxItem).Value.ToString();
+                        string Assess_id = (cmb_assessID.SelectedItem as ComboboxItem).Value.ToString();
+                        string query2 = "Update AssessmentComponent set Name = '" + txt_name.Text + " ', RubricId = '" + RubricID + " ', TotalMarks = '" + txt_marks.Text + " ' , DateCreated = '" + this.date + " ' , DateUpdated = '" + DateTime.Today + " ', AssessmentId = '" + Assess_id + " '   where Id = '" + this.id + "'";
                         SqlCommand update_command = new SqlCommand(query2, conn);
                         int j = update_command.ExecuteNonQuery();
                         if (j != 0)
@@ -75,9 +75,10 @@ namespace mini_project
                 {
                     cmb_assessID.Hide();
                     conn.Open();
-                    string query = "Insert into AssessmentComponent (Name,RubricId,TotalMarks,DateCreated,DateUpdated,AssessmentId) values('" + txt_name.Text + "','" + cmb_rubric.Text + "','" + txt_marks.Text + "''" + DateTime.Today + "','" + DateTime.Today + "', '" + this.assess_id + "')";
-                    SqlCommand command = new SqlCommand(query, conn);
-                    MessageBox.Show(query); 
+                    string RubricId = (cmb_rubric.SelectedItem as ComboboxItem).Value.ToString();
+                    
+                    string query = "Insert into AssessmentComponent (Name,RubricId,TotalMarks,DateCreated,DateUpdated,AssessmentId) values('" + txt_name.Text + "','" + RubricId + "','" + txt_marks.Text + "', '" + DateTime.Today + "','" + DateTime.Today + "', '" + this.assess_id + "')";
+                    SqlCommand command = new SqlCommand(query, conn); 
                     int i = command.ExecuteNonQuery();
                     if (i != 0)
                     {
@@ -100,7 +101,6 @@ namespace mini_project
 
         private void assessment_comp_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(assess_id);
             lbl_assess.Hide();
             SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
             conn.Open();
@@ -122,6 +122,7 @@ namespace mini_project
             {
                 btn_submit.Text = "update";
                 cmb_assessID.Show();
+                lbl_assess.Show();
                 string query1 = "Select * from Assessment";
                 SqlCommand command = new SqlCommand(query1, conn);
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -129,7 +130,7 @@ namespace mini_project
                     while (reader.Read())
                     {
                         ComboboxItem item = new ComboboxItem();
-                        item.Text = Convert.ToString(reader["Name"]);
+                        item.Text = Convert.ToString(reader["Title"]);
                         item.Value = Convert.ToString(reader["Id"]); ;
 
                         cmb_assessID.Items.Add(item);
@@ -146,7 +147,8 @@ namespace mini_project
         {
             SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
             conn.Open();
-            string query2 = "Select * from Rubric where Details = '" + cmb_clo.Text + "' ";
+            string CloId = (cmb_clo.SelectedItem as ComboboxItem).Value.ToString();
+            string query2 = "Select * from Rubric where CloId = '" + CloId+ "' ";
             SqlCommand command2 = new SqlCommand(query2, conn);
             using (SqlDataReader reader2 = command2.ExecuteReader())
             {
@@ -159,6 +161,34 @@ namespace mini_project
                     cmb_rubric.Items.Add(item2);
                 }
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            d.Show();
+            this.Hide();
+        }
+
+        private void btn_student_Click(object sender, EventArgs e)
+        {
+            StudentDetails d = new StudentDetails();
+            d.Show();
+            this.Hide();
+        }
+
+        private void btn_rubric_Click(object sender, EventArgs e)
+        {
+            CLO_details d = new CLO_details();
+            d.Show();
+            this.Hide();
+        }
+
+        private void btn_cloo_Click(object sender, EventArgs e)
+        {
+            CLO_details d = new CLO_details();
+            d.Show();
+            this.Hide();
         }
     }
 }

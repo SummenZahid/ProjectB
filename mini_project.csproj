@@ -69,6 +69,18 @@
     <Compile Include="assess_comp_detail.Designer.cs">
       <DependentUpon>assess_comp_detail.cs</DependentUpon>
     </Compile>
+    <Compile Include="AttendanceDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceDetails.Designer.cs">
+      <DependentUpon>AttendanceDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAttendance.Designer.cs">
+      <DependentUpon>ClassAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="CLO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +132,18 @@
     <Compile Include="rubric_level_details.Designer.cs">
       <DependentUpon>rubric_level_details.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAttendance.Designer.cs">
+      <DependentUpon>StudentAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAttendanceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAttendanceDetail.Designer.cs">
+      <DependentUpon>StudentAttendanceDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +161,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="assess_comp_detail.resx">
       <DependentUpon>assess_comp_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceDetails.resx">
+      <DependentUpon>AttendanceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassAttendance.resx">
+      <DependentUpon>ClassAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CLO.resx">
       <DependentUpon>CLO.cs</DependentUpon>
@@ -171,6 +201,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="rubric_level_details.resx">
       <DependentUpon>rubric_level_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAttendance.resx">
+      <DependentUpon>StudentAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAttendanceDetail.resx">
+      <DependentUpon>StudentAttendanceDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentDetails.resx">
       <DependentUpon>StudentDetails.cs</DependentUpon>

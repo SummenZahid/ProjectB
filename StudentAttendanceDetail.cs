@@ -11,47 +11,20 @@ using System.Data.SqlClient;
 
 namespace mini_project
 {
-    public partial class assess_comp_detail : Form
+    public partial class StudentAttendanceDetail : Form
     {
-        string assess_id;
-        public assess_comp_detail()
+        public StudentAttendanceDetail()
         {
             InitializeComponent();
         }
-        public assess_comp_detail(string id)
-        {
-            InitializeComponent();
-            this.assess_id = id;
 
-        }
-        private void assess_comp_detail_Load(object sender, EventArgs e)
-        {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
-            conn.Open();
-            string query = "select * from AssessmentComponent where AssessmentId = '" + this.assess_id + "' ";
-            using (SqlDataAdapter a = new SqlDataAdapter(query, conn))
-            {
-                DataTable t = new DataTable();
-                a.Fill(t);
-                dataGridView1.DataSource = t;
-            }
-        }
-
-        private void btn_new_comp_Click(object sender, EventArgs e)
-        {
-            assessment_comp s = new assessment_comp(assess_id);
-            s.Show();
-            this.Hide();
-        }
-
-        private void btn_dashboard_Click(object sender, EventArgs e)
+        private void StudentAttendanceDetail_Load(object sender, EventArgs e)
         {
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
             SqlConnection conn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
             conn.Open();
             var senderGrid = (DataGridView)sender;
@@ -65,26 +38,21 @@ namespace mini_project
                 values = new string[7];
                 using (SqlConnection con = new SqlConnection("Data Source = DESKTOP - M9PBVHQ; Initial Catalog = ProjectB; Integrated Security = True"))
                 {
-                    string oString = "Select * from AssessmentComponent where Id='" + a + "'";
+                    string oString = "Select * from ClassAttendance where Id='" + a + "'";
                     SqlCommand oCmd = new SqlCommand(oString, conn);
                     using (SqlDataReader oReader = oCmd.ExecuteReader())
                     {
                         while (oReader.Read())
                         {
                             values[0] = oReader["Id"].ToString();
-                            values[1] = oReader["Name"].ToString();
-                            values[2] = oReader["RubricId"].ToString();
-                            values[3] = oReader["TotalMarks"].ToString();
-                            values[4] = oReader["DateCreated"].ToString();
-                            values[5] = oReader["DateUpdated"].ToString();
-                            values[6] = oReader["AssessmentId"].ToString();
+                            values[1] = oReader["AttendanceDate"].ToString();
                             break;
                         }
 
                         conn.Close();
                     }
                 }
-                assessment_comp s = new assessment_comp(values[0], values[1], values[2] , values[3] , values[4], values[5] , values[6]);
+                ClassAttendance s = new ClassAttendance(values[0], values[1]);
                 this.Hide();
                 s.Show();
             }
@@ -94,15 +62,19 @@ namespace mini_project
                 int row_index = e.RowIndex;
                 DataGridViewRow selectedRow = dataGridView1.Rows[row_index];
                 string a = Convert.ToString(selectedRow.Cells["Id"].Value);
-                string query = "DELETE FROM AssessmentComponent WHERE Id = '" + a + "'";
+                string q2 = "DELETE FROM Rubric where CloId = '" + a + "'";
+                string query = "DELETE FROM ClassAttendance WHERE Id = '" + a + "'";
                 SqlCommand command = new SqlCommand(query, conn);
+                SqlCommand s = new SqlCommand(q2, conn);
+                s.ExecuteNonQuery();
+                MessageBox.Show("Rubrics deleted of this CLO");
                 command.ExecuteNonQuery();
                 MessageBox.Show("Row Deleted");
                 conn.Close();
 
                 SqlConnection cnn = new SqlConnection("Data Source=DESKTOP-M9PBVHQ;Initial Catalog=ProjectB;Integrated Security=True");
                 conn.Open();
-                string query1 = "select * from AssessmentComponent where AssessmentId = '" + this.assess_id + "'  ";
+                string query1 = "select * from ClassAttendance";
                 using (SqlDataAdapter am = new SqlDataAdapter(query1, cnn))
                 {
                     DataTable t = new DataTable();
@@ -110,6 +82,16 @@ namespace mini_project
                     dataGridView1.DataSource = t;
                 }
             }
+        }
+
+        private void btn_attandance_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_dash_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

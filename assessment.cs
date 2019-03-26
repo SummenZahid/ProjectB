@@ -44,7 +44,7 @@ namespace mini_project
 
         private void btn_student_Click(object sender, EventArgs e)
         {
-            Student d = new Student();
+            StudentDetails d = new StudentDetails();
             d.Show();
             this.Hide();
         }

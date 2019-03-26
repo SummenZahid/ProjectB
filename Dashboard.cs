@@ -46,5 +46,12 @@ namespace mini_project
             this.Hide();
 
         }
+
+        private void btn_attandance_Click(object sender, EventArgs e)
+        {
+            StudentAttendance c = new StudentAttendance();
+            c.Show();
+            this.Hide();
+        }
     }
 }

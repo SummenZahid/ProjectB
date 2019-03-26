@@ -308,6 +308,7 @@
             this.btn_student.TabIndex = 3;
             this.btn_student.Text = "Student";
             this.btn_student.UseVisualStyleBackColor = false;
+            this.btn_student.Click += new System.EventHandler(this.btn_student_Click);
             // 
             // btn_rubric
             // 
@@ -324,6 +325,7 @@
             this.btn_rubric.TabIndex = 4;
             this.btn_rubric.Text = "Rubric";
             this.btn_rubric.UseVisualStyleBackColor = false;
+            this.btn_rubric.Click += new System.EventHandler(this.btn_rubric_Click);
             // 
             // button3
             // 
@@ -340,6 +342,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "Dashboard";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_cloo
             // 
@@ -356,6 +359,7 @@
             this.btn_cloo.TabIndex = 6;
             this.btn_cloo.Text = "CLO";
             this.btn_cloo.UseVisualStyleBackColor = false;
+            this.btn_cloo.Click += new System.EventHandler(this.btn_cloo_Click);
             // 
             // tableLayoutPanel1
             // 

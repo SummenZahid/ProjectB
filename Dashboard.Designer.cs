@@ -47,7 +47,7 @@
             this.btn_level = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_attandance = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
@@ -340,7 +340,7 @@
             // 
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Controls.Add(this.button3, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.btn_attandance, 0, 1);
             this.tableLayoutPanel9.Controls.Add(this.pictureBox6, 0, 0);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(263, 228);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -351,20 +351,21 @@
             this.tableLayoutPanel9.Size = new System.Drawing.Size(170, 152);
             this.tableLayoutPanel9.TabIndex = 4;
             // 
-            // button3
+            // btn_attandance
             // 
-            this.button3.BackColor = System.Drawing.Color.Tomato;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(3, 109);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 40);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Students";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_attandance.BackColor = System.Drawing.Color.Tomato;
+            this.btn_attandance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_attandance.FlatAppearance.BorderSize = 0;
+            this.btn_attandance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_attandance.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_attandance.ForeColor = System.Drawing.Color.White;
+            this.btn_attandance.Location = new System.Drawing.Point(3, 109);
+            this.btn_attandance.Name = "btn_attandance";
+            this.btn_attandance.Size = new System.Drawing.Size(164, 40);
+            this.btn_attandance.TabIndex = 4;
+            this.btn_attandance.Text = "Attendance";
+            this.btn_attandance.UseVisualStyleBackColor = false;
+            this.btn_attandance.Click += new System.EventHandler(this.btn_attandance_Click);
             // 
             // pictureBox6
             // 
@@ -473,7 +474,7 @@
         private System.Windows.Forms.Button btn_level;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_attandance;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.Button button4;
