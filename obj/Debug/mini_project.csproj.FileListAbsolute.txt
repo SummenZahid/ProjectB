@@ -27,3 +27,32 @@ C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini
 C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.ShowResult.resources
 C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.clo_wise.resources
 C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.assess_wise.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\bin\Debug\mini_project.exe.config
+C:\Users\Hp\Desktop\cloneeee\ProjectB\bin\Debug\mini_project.exe
+C:\Users\Hp\Desktop\cloneeee\ProjectB\bin\Debug\mini_project.pdb
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.csprojAssemblyReference.cache
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.assessment.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.assessment_comp.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.assessment_details.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.assess_comp_detail.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.assess_wise.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.AttendanceDetails.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.ClassAttendance.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.CLO.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.CLO_details.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.clo_wise.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.Dashboard.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.Student.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.MarkAttendance.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.Properties.Resources.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.Result.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.Rubrics.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.Rubrics_Level.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.Rubric_details.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.rubric_level_details.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.ShowResult.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.StudentDetails.resources
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.csproj.GenerateResource.cache
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.csproj.CoreCompileInputs.cache
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.exe
+C:\Users\Hp\Desktop\cloneeee\ProjectB\obj\Debug\mini_project.pdb
