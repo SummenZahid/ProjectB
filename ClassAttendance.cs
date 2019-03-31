@@ -108,5 +108,54 @@ namespace mini_project
             c.Show();
             this.Hide();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Dashboard c = new Dashboard();
+            c.Show();
+            this.Hide();
+        }
+
+        private void btn_student_Click_1(object sender, EventArgs e)
+        {
+            StudentDetails c = new StudentDetails();
+            c.Show();
+            this.Hide();
+        }
+
+        private void btn_rubric_Click_1(object sender, EventArgs e)
+        {
+            CLO_details c = new CLO_details();
+            c.Show();
+            this.Hide();
+        }
+
+        private void btn_cloo_Click_1(object sender, EventArgs e)
+        {
+            CLO_details c = new CLO_details();
+            c.Show();
+            this.Hide();
+        }
+
+        private void btn_assessment_Click(object sender, EventArgs e)
+        {
+            assessment_details c = new assessment_details();
+            c.Show();
+            this.Hide();
+        }
+
+        private void btn_attendance_Click(object sender, EventArgs e)
+        {
+            MarkAttendance c = new MarkAttendance();
+            c.Show();
+            this.Hide();
+        }
+
+        private void btn_result_Click(object sender, EventArgs e)
+        {
+            ShowResult c = new ShowResult();
+            c.Show();
+            this.Hide();
+        }
     }
 }

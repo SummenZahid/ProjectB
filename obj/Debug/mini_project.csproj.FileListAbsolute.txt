@@ -22,5 +22,8 @@ C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini
 C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.assess_comp_detail.resources
 C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.ClassAttendance.resources
 C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.AttendanceDetails.resources
-C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.StudentAttendance.resources
-C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.StudentAttendanceDetail.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.MarkAttendance.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.Result.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.ShowResult.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.clo_wise.resources
+C:\Users\Hp\Desktop\semester 6\DBMS\LAB\mini_project\mini_project\obj\Debug\mini_project.assess_wise.resources

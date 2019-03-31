@@ -83,6 +83,16 @@ namespace mini_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5a1e5dc06b4ff {
+            get {
+                object obj = ResourceManager.GetObject("5a1e5dc06b4ff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap checkbox_icon {
             get {
                 object obj = ResourceManager.GetObject("checkbox_icon", resourceCulture);
@@ -106,6 +116,26 @@ namespace mini_project.Properties {
         internal static System.Drawing.Bitmap document {
             get {
                 object obj = ResourceManager.GetObject("document", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Education_Thrives_When_You_Keep_It_Under_Five {
+            get {
+                object obj = ResourceManager.GetObject("Education Thrives When You Keep It Under Five", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Result {
+            get {
+                object obj = ResourceManager.GetObject("Result", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

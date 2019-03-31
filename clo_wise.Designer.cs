@@ -1,6 +1,6 @@
 ﻿namespace mini_project
 {
-    partial class ClassAttendance
+    partial class clo_wise
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_name = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_date = new System.Windows.Forms.DateTimePicker();
+            this.cmb_clo = new System.Windows.Forms.ComboBox();
             this.error_msg = new System.Windows.Forms.Label();
             this.btn_submit = new System.Windows.Forms.Button();
             this.nav = new System.Windows.Forms.TableLayoutPanel();
@@ -71,7 +71,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(646, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Class Attendance";
+            this.label1.Text = "CLOs";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel2
@@ -158,8 +158,8 @@
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.49911F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.4032F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.btn_submit, 1, 1);
@@ -176,13 +176,13 @@
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.42211F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.57789F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel6.Controls.Add(this.lbl_name, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel9, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.error_msg, 1, 2);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(78, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(86, 3);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
@@ -192,7 +192,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(398, 260);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(390, 260);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // lbl_name
@@ -201,42 +201,45 @@
             this.lbl_name.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_name.Location = new System.Drawing.Point(3, 87);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(131, 100);
+            this.lbl_name.Size = new System.Drawing.Size(111, 100);
             this.lbl_name.TabIndex = 0;
-            this.lbl_name.Text = "Attendance date";
+            this.lbl_name.Text = "Rubric Level:";
             this.lbl_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Controls.Add(this.txt_date, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.cmb_clo, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(140, 90);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(120, 90);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 3;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.03267F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.93465F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.03267F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(255, 94);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(267, 94);
             this.tableLayoutPanel9.TabIndex = 5;
             // 
-            // txt_date
+            // cmb_clo
             // 
-            this.txt_date.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_date.Location = new System.Drawing.Point(3, 31);
-            this.txt_date.Name = "txt_date";
-            this.txt_date.Size = new System.Drawing.Size(249, 30);
-            this.txt_date.TabIndex = 0;
+            this.cmb_clo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmb_clo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_clo.FormattingEnabled = true;
+            this.cmb_clo.Location = new System.Drawing.Point(2, 31);
+            this.cmb_clo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cmb_clo.Name = "cmb_clo";
+            this.cmb_clo.Size = new System.Drawing.Size(263, 30);
+            this.cmb_clo.TabIndex = 18;
             // 
             // error_msg
             // 
             this.error_msg.AutoSize = true;
             this.error_msg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.error_msg.ForeColor = System.Drawing.Color.Red;
-            this.error_msg.Location = new System.Drawing.Point(140, 187);
+            this.error_msg.Location = new System.Drawing.Point(120, 187);
             this.error_msg.Name = "error_msg";
-            this.error_msg.Size = new System.Drawing.Size(255, 73);
+            this.error_msg.Size = new System.Drawing.Size(267, 73);
             this.error_msg.TabIndex = 7;
             this.error_msg.Text = "Please fill the require field!";
             this.error_msg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -248,12 +251,12 @@
             this.btn_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_submit.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_submit.ForeColor = System.Drawing.Color.White;
-            this.btn_submit.Location = new System.Drawing.Point(78, 269);
+            this.btn_submit.Location = new System.Drawing.Point(86, 269);
             this.btn_submit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_submit.Name = "btn_submit";
-            this.btn_submit.Size = new System.Drawing.Size(398, 42);
+            this.btn_submit.Size = new System.Drawing.Size(390, 42);
             this.btn_submit.TabIndex = 1;
-            this.btn_submit.Text = "Add Class";
+            this.btn_submit.Text = "Show Result";
             this.btn_submit.UseVisualStyleBackColor = false;
             this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
@@ -399,20 +402,19 @@
             this.btn_result.UseVisualStyleBackColor = false;
             this.btn_result.Click += new System.EventHandler(this.btn_result_Click);
             // 
-            // ClassAttendance
+            // clo_wise
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(730, 391);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Century Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "ClassAttendance";
+            this.Name = "clo_wise";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ClassAttendance";
-            this.Load += new System.EventHandler(this.ClassAttendance_Load);
+            this.Text = "clo_wise";
+            this.Load += new System.EventHandler(this.clo_wise_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -442,7 +444,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Label error_msg;
         private System.Windows.Forms.Button btn_submit;
-        private System.Windows.Forms.DateTimePicker txt_date;
+        private System.Windows.Forms.ComboBox cmb_clo;
         private System.Windows.Forms.TableLayoutPanel nav;
         private System.Windows.Forms.Button btn_student;
         private System.Windows.Forms.Button btn_rubric;

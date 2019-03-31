@@ -69,6 +69,12 @@
     <Compile Include="assess_comp_detail.Designer.cs">
       <DependentUpon>assess_comp_detail.cs</DependentUpon>
     </Compile>
+    <Compile Include="assess_wise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="assess_wise.Designer.cs">
+      <DependentUpon>assess_wise.cs</DependentUpon>
+    </Compile>
     <Compile Include="AttendanceDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     <Compile Include="CLO_details.Designer.cs">
       <DependentUpon>CLO_details.cs</DependentUpon>
     </Compile>
+    <Compile Include="clo_wise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clo_wise.Designer.cs">
+      <DependentUpon>clo_wise.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComboboxItem.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -106,8 +118,20 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MarkAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarkAttendance.Designer.cs">
+      <DependentUpon>MarkAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result.Designer.cs">
+      <DependentUpon>Result.cs</DependentUpon>
+    </Compile>
     <Compile Include="Rubrics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,17 +156,11 @@
     <Compile Include="rubric_level_details.Designer.cs">
       <DependentUpon>rubric_level_details.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentAttendance.cs">
+    <Compile Include="ShowResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentAttendance.Designer.cs">
-      <DependentUpon>StudentAttendance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StudentAttendanceDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentAttendanceDetail.Designer.cs">
-      <DependentUpon>StudentAttendanceDetail.cs</DependentUpon>
+    <Compile Include="ShowResult.Designer.cs">
+      <DependentUpon>ShowResult.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentDetails.cs">
       <SubType>Form</SubType>
@@ -162,6 +180,9 @@
     <EmbeddedResource Include="assess_comp_detail.resx">
       <DependentUpon>assess_comp_detail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="assess_wise.resx">
+      <DependentUpon>assess_wise.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AttendanceDetails.resx">
       <DependentUpon>AttendanceDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,11 +195,17 @@
     <EmbeddedResource Include="CLO_details.resx">
       <DependentUpon>CLO_details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="clo_wise.resx">
+      <DependentUpon>clo_wise.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkAttendance.resx">
+      <DependentUpon>MarkAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -190,6 +217,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Result.resx">
+      <DependentUpon>Result.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Rubrics.resx">
       <DependentUpon>Rubrics.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,11 +232,8 @@
     <EmbeddedResource Include="rubric_level_details.resx">
       <DependentUpon>rubric_level_details.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentAttendance.resx">
-      <DependentUpon>StudentAttendance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StudentAttendanceDetail.resx">
-      <DependentUpon>StudentAttendanceDetail.cs</DependentUpon>
+    <EmbeddedResource Include="ShowResult.resx">
+      <DependentUpon>ShowResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentDetails.resx">
       <DependentUpon>StudentDetails.cs</DependentUpon>
@@ -241,6 +268,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\checkbox_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5a1e5dc06b4ff.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Education Thrives When You Keep It Under Five.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Result.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

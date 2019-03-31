@@ -206,5 +206,26 @@ namespace mini_project
             c.Show();
             
         }
+
+        private void btn_assessment_Click(object sender, EventArgs e)
+        {
+            assessment_details c = new assessment_details();
+            this.Hide();
+            c.Show();
+        }
+
+        private void btn_attendance_Click(object sender, EventArgs e)
+        {
+            MarkAttendance c = new MarkAttendance();
+            this.Hide();
+            c.Show();
+        }
+
+        private void btn_result_Click(object sender, EventArgs e)
+        {
+            ShowResult c = new ShowResult();
+            this.Hide();
+            c.Show();
+        }
     }
 }

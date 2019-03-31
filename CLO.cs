@@ -117,5 +117,54 @@ namespace mini_project
             this.Hide();
             c.Show();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Dashboard d = new Dashboard();
+            d.Show();
+            this.Hide();
+        }
+        private void btn_student_Click_1(object sender, EventArgs e)
+        {
+            StudentDetails s = new StudentDetails();
+            s.Show();
+            this.Hide();
+        }
+
+        private void btn_rubric_Click_1(object sender, EventArgs e)
+        {
+            CLO_details r = new CLO_details();
+            MessageBox.Show("Select clo to add or show rubrics");
+            r.Show();
+            this.Hide();
+        }
+
+        private void btn_cloo_Click_1(object sender, EventArgs e)
+        {
+            CLO_details c = new CLO_details();
+            this.Hide();
+            c.Show();
+        }
+
+        private void btn_assessment_Click(object sender, EventArgs e)
+        {
+            assessment_details c = new assessment_details();
+            this.Hide();
+            c.Show();
+        }
+
+        private void btn_attendance_Click(object sender, EventArgs e)
+        {
+            MarkAttendance c = new MarkAttendance();
+            this.Hide();
+            c.Show();
+        }
+
+        private void btn_result_Click(object sender, EventArgs e)
+        {
+            ShowResult c = new ShowResult();
+            this.Hide();
+            c.Show();
+        }
     }
 }

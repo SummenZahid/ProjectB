@@ -50,7 +50,7 @@
             this.btn_attandance = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_result = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -328,7 +328,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox5.Image = global::mini_project.Properties.Resources.checkbox_icon;
+            this.pictureBox5.Image = global::mini_project.Properties.Resources._5a1e5dc06b4ff;
             this.pictureBox5.Location = new System.Drawing.Point(3, 3);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(164, 100);
@@ -370,7 +370,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox6.Image = global::mini_project.Properties.Resources.checkbox_icon;
+            this.pictureBox6.Image = global::mini_project.Properties.Resources.Education_Thrives_When_You_Keep_It_Under_Five;
             this.pictureBox6.Location = new System.Drawing.Point(3, 3);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(164, 100);
@@ -382,7 +382,7 @@
             // 
             this.tableLayoutPanel10.ColumnCount = 1;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Controls.Add(this.button4, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.btn_result, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.pictureBox7, 0, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(439, 228);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
@@ -393,25 +393,26 @@
             this.tableLayoutPanel10.Size = new System.Drawing.Size(170, 152);
             this.tableLayoutPanel10.TabIndex = 5;
             // 
-            // button4
+            // btn_result
             // 
-            this.button4.BackColor = System.Drawing.Color.LimeGreen;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(3, 109);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(164, 40);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Rubrics";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_result.BackColor = System.Drawing.Color.LimeGreen;
+            this.btn_result.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_result.FlatAppearance.BorderSize = 0;
+            this.btn_result.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_result.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_result.ForeColor = System.Drawing.Color.White;
+            this.btn_result.Location = new System.Drawing.Point(3, 109);
+            this.btn_result.Name = "btn_result";
+            this.btn_result.Size = new System.Drawing.Size(164, 40);
+            this.btn_result.TabIndex = 3;
+            this.btn_result.Text = "Result";
+            this.btn_result.UseVisualStyleBackColor = false;
+            this.btn_result.Click += new System.EventHandler(this.btn_result_Click);
             // 
             // pictureBox7
             // 
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox7.Image = global::mini_project.Properties.Resources.checkbox_icon;
+            this.pictureBox7.Image = global::mini_project.Properties.Resources.Result;
             this.pictureBox7.Location = new System.Drawing.Point(3, 3);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(164, 100);
@@ -477,7 +478,7 @@
         private System.Windows.Forms.Button btn_attandance;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_result;
         private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

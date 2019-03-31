@@ -49,8 +49,15 @@ namespace mini_project
 
         private void btn_attandance_Click(object sender, EventArgs e)
         {
-            StudentAttendance c = new StudentAttendance();
+            MarkAttendance c = new MarkAttendance();
             c.Show();
+            this.Hide();
+        }
+
+        private void btn_result_Click(object sender, EventArgs e)
+        {
+            ShowResult r = new ShowResult();
+            r.Show();
             this.Hide();
         }
     }
